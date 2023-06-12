@@ -56,9 +56,9 @@ node_modules/.pnpm/caniuse-lite@1.0.30001491                                    
 
 All dependencies                                                                         212.94 MB         61.82 MB
 ```
-이 문제를 해결하는 것이 가장 컸는데, 결국 커스텀 빌드를 하는 것으로 마무리 되었다.
-[Automatic/node-canvas](https://github.com/Automattic/node-canvas) 레포지토리는 신기한 방법으로 빌드되는데, prebuilds 브랜치에서 모든 빌드 스크립트를 관리하고, main 브랜치에 있는 빌드 스크립트는 안 쓰는 것이다. (되게 놀라웠다 발상의 전환...) 이때 GitHub Actions에서는 main 브랜치 내용을 불러 오면 최신 빌드가 되는 것이다. 그래서 main 브랜치의 빌드 스크립트는 현재 outdated된 상태고, prebuilds 브랜치에 있는 것이 빌드 파일들 기준으로 최신인 것이다. (정확히는 Tag 기반으로 Pull 해 오게 된다)
-prebuild/Linux/binding.gyp에서 JPEG과 SVG 지원을 끄고 관련 라이브러리 복사를 제외해 준 다음 빌드 타겟 Node 버전과 Debain stretch의 apt 리스트만 수정해 주면 빌드가 된다. 빌드 전 태그에 맞는 Release를 생성해 주어야 한다. (참고: [maxswjeon/node-canvas](https://github.com/maxswjeon/node-canvas/tree/prebuilds))
+이 문제를 해결하는 것이 가장 컸는데, 결국 커스텀 빌드를 하는 것으로 마무리 되었다.  
+[Automatic/node-canvas](https://github.com/Automattic/node-canvas) 레포지토리는 신기한 방법으로 빌드되는데, prebuilds 브랜치에서 모든 빌드 스크립트를 관리하고, main 브랜치에 있는 빌드 스크립트는 안 쓰는 것이다. (되게 놀라웠다 발상의 전환...) 이때 GitHub Actions에서는 main 브랜치 내용을 불러 오면 최신 빌드가 되는 것이다. 그래서 main 브랜치의 빌드 스크립트는 현재 outdated된 상태고, prebuilds 브랜치에 있는 것이 빌드 파일들 기준으로 최신인 것이다. (정확히는 Tag 기반으로 Pull 해 오게 된다)  
+prebuild/Linux/binding.gyp에서 JPEG과 SVG 지원을 끄고 관련 라이브러리 복사를 제외해 준 다음 빌드 타겟 Node 버전과 Debain stretch의 apt 리스트만 수정해 주면 빌드가 된다. 빌드 전 태그에 맞는 Release를 생성해 주어야 한다. (참고: [maxswjeon/node-canvas](https://github.com/maxswjeon/node-canvas/tree/prebuilds))  
 이렇게 빌드되면 npm에 패키지를 올리고 이를 사용하면 된다. 패키지 매니저로 npm을 썼다면 빌드 스크립트만 수정해서 옵션을 따로 주면 됐을 텐데, pnpm을 쓰는 바람에 pnpm은 해당 옵션이 없어서 (build-from-source였나 아무튼) 그래서 직접 빌드해서 올리게 되었다. 지금 와서 생각해 보면 빌드 할 필요 없이 prebuild를 아예 삭제해서 올렸으면 build from source를 했지 않았을까 생각하는데...
 # 회고
 생각해보면 LD_LIBRARY_PATH에 /tmp를 넣어 놓고 Lazy Loading을 하는 것이 더 낫지 않았나 싶다. 생각해보고, 나중에 다시 한 번 해봐야겠다.
