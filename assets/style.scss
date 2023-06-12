@@ -1,0 +1,17 @@
+---
+---
+
+@import '{{ site.theme }}';
+
+/* append your custom style below */
+
+/* title */
+h1[data-toc-skip] {
+  font-size: 2.5rem;
+}
+
+br {
+  content: '';
+  display: block;
+  margin: 10px 0;
+}
