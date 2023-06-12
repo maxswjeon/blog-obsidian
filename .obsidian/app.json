@@ -10,7 +10,8 @@
   "useMarkdownLinks": true,
   "attachmentFolderPath": "assets/images",
   "userIgnoreFilters": [
-    "README.md"
+    "README.md",
+    "_tabs/"
   ],
   "strictLineBreaks": true
 }
