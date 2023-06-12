@@ -1,0 +1,46 @@
+블로그를 만들려고 많은 고민을 해 왔다. 네이버 블로그나 티스토리 같은 것들은 사용하기 싫었고 (너무 일반적인 느낌이랄까) 그렇다고 Jekyll로 블로그를 만들자니 생 마크다운을 블로그 용도로 사용하는 것도 너무 싫었다.
+그러다 Obsidian이 굉장히 좋다는 이야기를 들었고, 그래서 한 번 사용해 보기로 했다.
+# 시작하기 전에 시도해보았던 것들
+## [Tiptap](https://tiptap.dev/)
+Tiptap은 이전에 HackerNews와 트위터에서 한 번 유행을 탔었던 걸로 기억한다. 사용성이나 확장성은 되게 좋았는데, [리스트 관련 버그](https://github.com/ueberdosis/tiptap/issues/3128)가 있어서 일단 한 발짝 물러났었다.
+## [BlockNote](https://github.com/TypeCellOS/BlockNote)
+BlockNote는 Tiptap 버그를 해결한 걸로 위 이슈에서 언급되어서 알게 된 건데, 초반에는 커스텀 블록이 지원되지 않고, 이미지랑 코드 지원이 안되서 기다리다가 0.8.0 버전이 나오면서 커스텀 블럭이 지원되어서 이에 대한 블로그 시스템도 구현해 본 적 있다. 심각한 버그가 있어서 다음 버전을 기다리고 있는 중인데, 생각보다 잘 안 쓰게 될 거 같아서 좀 걱정이 많다.
+# Obsidian 셋팅하기
+## Git 셋업하기
+일단 [Obsidian Git](https://github.com/denolehov/obsidian-git)을 설치하고 시작했다. Git으로 시작해야 Jeykll을 쓰던지 말던지 할 것이므로...
+내가 Jeykll에 불만족스러웠던 건 Editing Experience, EX(?)이지 다른게 아니었기 때문에...
+## 디자인 손보기
+노션에 맛들린 나는 노션과 같은 Block 느낌이 나는 에디터가 좋았다. 단락별로 구분되어 있어서, Hard Break (Shift + Enter로 만든 엔터나 자연스럽게 Word Break 때문에 내려오는 것)이랑 단락을 일부러 나눈 것을 구분하고 싶었다. 노션이 이걸 잘 하지. 아쉽게도 여기는 Hard Break은 없는 것 같지만. 그건 괜찮다. 타협할 수 있다.
+가장 마음에 안들었던 건, Heading에 Top margin이 없는 것과 Title과 Heading 1의 크기 차이가 나지 않는 것이었다. 제목이 여러 줄이 되는 건 신경 쓰이지 않는다.
+다음과 같은 Custom CSS를 이용하여 디자인을 손봤다.
+```css
+.inline-title {
+  font-size: 2.5em;
+}
+
+.cm-line.HyperMD-header-1 {
+  padding-top: 40px !important;
+}
+
+.cm-line.HyperMD-header-2 {
+  padding-top: 20px !important;
+}
+
+.cm-line.HyperMD-header-3 {
+  padding-top: 15px !important;
+}
+
+.cm-line {
+  padding-top: 10px !important;
+}
+
+.HyperMD-codeblock .cm-line {
+  padding-top: 0px !important;
+}
+```
+## 노션과 같은 링크 붙여넣기
+노션에서는 글을 선택하고 붙여넣으면 그 부분을 링크로 바꾸어주는 기능이 있었다. 그런 기능이 되게 편해서, 찾아보니 [Paste URL into selection](https://github.com/denolehov/obsidian-url-into-selection)이라는 플러그인이 존재해서 설치해 주었다.
+## 링크 미리 보기
+링크 미리보기를 되게 바랬는데, 역시 Markdown의 기능이 아니다 보니 없는 것 같더라. 이 기능 되게 잘 썼었는데, 이걸 어떻게 구현할까 고민해 보아야겠다.
+물론 이미 구현된 것도 있긴 하다. [Obsidian Rich Links Plugin](https://github.com/dhamaniasad/obsidian-rich-links)이라고 있는데, 디자인이 애매해서... Rich Link를 만들 때도 되게 애매하게 선택해줘야 하는 것도 조금 불편해서...
+나오는 것도 그냥 HTML로 나오고, OpenGraph Image도 이상한 걸 긁어오는 것 같아서 좀 그랬다. 내가 Fork 해서 다시 구현을 하던지 해야겠다.
