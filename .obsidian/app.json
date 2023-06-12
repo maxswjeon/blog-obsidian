@@ -11,5 +11,6 @@
   "attachmentFolderPath": "attachments",
   "userIgnoreFilters": [
     "README.md"
-  ]
+  ],
+  "strictLineBreaks": true
 }

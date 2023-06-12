@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-06-13-Obsidian을 블로그 백엔드로 사용하기.md",
+                "file": "_tabs/about.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -109,12 +109,12 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "04bb878cc4674ed2",
+  "active": "779c95d832abc6e0",
   "lastOpenFiles": [
+    "_posts/2023-06-13-Obsidian을 블로그 백엔드로 사용하기.md",
+    "_tabs/about.md",
     "_tabs/categories.md",
     "_tabs/tags.md",
-    "_tabs/archives.md",
-    "_tabs/about.md",
-    "_posts/2023-06-13-Obsidian을 블로그 백엔드로 사용하기.md"
+    "_tabs/archives.md"
   ]
 }
