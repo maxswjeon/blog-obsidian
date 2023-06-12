@@ -8,7 +8,7 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "_posts",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "attachments",
+  "attachmentFolderPath": "assets/images",
   "userIgnoreFilters": [
     "README.md"
   ],
