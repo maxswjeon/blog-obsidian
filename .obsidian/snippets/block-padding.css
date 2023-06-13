@@ -27,3 +27,9 @@ br {
   display: block;
   margin: 10px 0;
 }
+
+.HyperMD-codeblock br {
+  content: none;
+  display: inline;
+  margin: 0;
+}
