@@ -21,3 +21,9 @@
 .HyperMD-codeblock .cm-line {
   padding-top: 0px !important;
 }
+
+br {
+  content: '';
+  display: block;
+  margin: 10px 0;
+}
