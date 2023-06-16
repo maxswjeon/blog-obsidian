@@ -1,0 +1,1 @@
+nRF52811 기반의 개발 보드 및 모듈인 [Ebyte사의 E104-BT5011A 모듈](https://www.cdebyte.com/products/E104-BT5011A) 5개와 개발 보드 5개를 구매했다. 
