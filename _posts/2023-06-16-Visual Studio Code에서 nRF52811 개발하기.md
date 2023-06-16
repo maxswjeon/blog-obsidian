@@ -8,10 +8,10 @@ nRF52811 기반의 개발 보드 및 모듈인 [Ebyte사의 E104-BT5011A 모듈]
 조금 걱정되는 것은 내 핸드폰이 Note 20 Ultra로 Bluetooth 5.0을 지원하는데, AoA와 AoD는 5.1부터 지원된다는 것이다. 이론적으로는 계산하는 쪽에서만 5.1 이상을 지원하면 되는데, 그래도 불안한 건 여전하다...
 # AoA와 AoD
 ## AoA (Angle of Arrival)
-![AoA Method](Pasted%20image%2020230616155915.png)  
+![AoA Method](/assets/images/Pasted%20image%2020230616155915.png)  
 여러 개의 안테나를 이용하여 신호가 도착하는 각도를 계산하는 방법이다.
 ## AoD (Angle of Departure)
-![AoD Method](Pasted%20image%2020230616160405.png)  
+![AoD Method](/assets/images/Pasted%20image%2020230616160405.png)  
 여러 개의 안테나를 이용하여 신호가 출발하는 각도를 계산하는 방법이다.
 # Ebyte E104-BT5011A
 ```embed
@@ -22,8 +22,8 @@ url: 'https://www.cdebyte.com/products/E104-BT5011A'
 ```
 nRF52811이라는 Blutetooth 5.1 기반의 칩 기반으로 만들어진 모듈로, 이를 이용하여 개발을 해보려 한다.
 # nRF Connect SDK 설치
-![](Pasted%20image%2020230616165134.png)
-!!![](Pasted%20image%2020230616165144.png)  
+![](/assets/images/Pasted%20image%2020230616165134.png)
+![](/assets/images/Pasted%20image%2020230616165144.png)  
 설치에 꽤 많은 시간이 걸린다. 30분 정도? 시간을 넉넉하게 가지고 가는 것이 좋을 듯.
 
 **Visual Studio Code를 켜놓고 설치하면 안된다.** Path를 쓰기 때문에 설치 후에 Visual Studio Code를 한 번 껐다 켜 주어야 Toolchain을 정상적으로 인식한다. nrfjprog를 못찾는 경우도 있는데, 이런 경우 따로 설치해도 된다. (따로 설치할 필요는 없는 것 같긴 하다)
