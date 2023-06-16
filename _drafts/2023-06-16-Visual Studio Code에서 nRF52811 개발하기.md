@@ -10,3 +10,6 @@ nRF52811 기반의 개발 보드 및 모듈인 [Ebyte사의 E104-BT5011A 모듈]
 ## AoA (Angle of Arrival)
 ![AoA Method](Pasted%20image%2020230616155915.png)
 여러 개의 안테나를 이용하여 신호가 도착하는 각도를 계산하는 방법이다.
+## AoD (Angle of Departure)
+![AoD Method](Pasted%20image%2020230616160405.png)
+여러 개의 안테나를 이용하여 
