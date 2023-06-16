@@ -20,3 +20,16 @@ image: 'https://www.cdebyte.com/products/img/3.jpg'
 description: 'E104-BT5011A is a serial to BLE Bluetooth master-slave integrated module based on Bluetooth protocol version 5.1. It is small in size and low in power consumption.'
 url: 'https://www.cdebyte.com/products/E104-BT5011A'
 ```
+nRF52811이라는 
+# nRF Connect SDK 설치
+![](Pasted%20image%2020230616165134.png)
+![](Pasted%20image%2020230616165144.png)
+설치에 꽤 많은 시간이 걸린다. 30분 정도? 시간을 넉넉하게 가지고 가는 것이 좋을 듯.
+
+**Visual Studio Code를 켜놓고 설치하면 안된다.** Path를 쓰기 때문에 설치 후에 Visual Studio Code를 한 번 껐다 켜 주어야 Toolchain을 정상적으로 인식한다. nrfjprog를 못찾는 경우도 있는데, 이런 경우 따로 설치해도 된다. (따로 설치할 필요는 없는 것 같긴 하다)
+```embed
+title: 'nRF Command Line Tools - Downloads'
+image: 'https://www.nordicsemi.com/-/media/Images/Logos/Nordic-Semiconductor_logo.png'
+description: 'Nordic Semiconductor'
+url: 'https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download'
+```
