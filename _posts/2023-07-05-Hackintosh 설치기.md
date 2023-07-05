@@ -1,5 +1,5 @@
 ---
-title: 2023-07-05-Hackintosh 설치기
+title: Hackintosh 설치기
 date: 2023-07-05 22:00:00 +0900
 categories: [Development, Etc]
 tags: [hackintosh, macos]
