@@ -1,7 +1,7 @@
 ---
 title: Vercel에서 canvas (Node Canvas) 사용하기
 date: 2023-06-08 18:37:59 +0900
-categories: [Develpment, Web]
+categories: [Development, Web]
 tags: [canvas, node-canvas, vercel]
 ---
 # 개요

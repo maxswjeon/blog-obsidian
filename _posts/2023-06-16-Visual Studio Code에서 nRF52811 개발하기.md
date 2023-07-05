@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Code에서 nRF52811 개발하기
 date: 2023-06-16 18:00:00 +0900
-categories: [Develpment, Hardware]
+categories: [Development, Hardware]
 tags: [nRF52811, bluetooth, ble]
 ---
 nRF52811 기반의 개발 보드 및 모듈인 [Ebyte사의 E104-BT5011A 모듈](https://www.cdebyte.com/products/E104-BT5011A) 5개와 개발 보드 5개를 구매했다. Bluetooth 5.1 버전부터 들어간 AoA(Angle of Arrival)과 AoD(Angle of Departure)을 이용하여 더 정확한 Position Finding이 가능할까 싶고, 3개 이상의 BLE Device (Sender이든 Reciever이든)가 필요했던 기존 삼각측량 방법이 아닌 1개의 BLE Device로 해볼 수 있다는 점이 매력적이라 구매하였다.  
@@ -22,7 +22,7 @@ url: 'https://www.cdebyte.com/products/E104-BT5011A'
 ```
 nRF52811이라는 Blutetooth 5.1 기반의 칩 기반으로 만들어진 모듈로, 이를 이용하여 개발을 해보려 한다.
 # nRF Connect SDK 설치
-![](/assets/images/Pasted%20image%2020230616165134.png)
+![](/assets/images/Pasted%20image%2020230616165134.png)  
 ![](/assets/images/Pasted%20image%2020230616165144.png)  
 설치에 꽤 많은 시간이 걸린다. 30분 정도? 시간을 넉넉하게 가지고 가는 것이 좋을 듯.
 
