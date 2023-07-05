@@ -49,9 +49,9 @@
       "format": "dddd, MMMM Do YYYY, h:mm:ss a"
     },
     "yaml-title": {
-      "enabled": false,
+      "enabled": true,
       "title-key": "title",
-      "mode": "first-h1-or-filename-if-h1-missing"
+      "mode": "filename"
     },
     "yaml-title-alias": {
       "enabled": false,
@@ -166,7 +166,7 @@
       "enabled": false
     },
     "empty-line-around-tables": {
-      "enabled": false
+      "enabled": true
     },
     "heading-blank-lines": {
       "enabled": false,
